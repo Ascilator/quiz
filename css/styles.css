@@ -472,6 +472,12 @@ a:active {
 }
 
 @media screen and (max-width: 550px) {
+  .quiz_content_box .left_part .questions_part .answear_cont .answear_item:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
   .quiz_content_box .left_part .questions_part .answear_cont {
     display: block;
     -webkit-box-flex: 0;
