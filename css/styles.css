@@ -182,7 +182,11 @@ a:active {
             flex: 0 0 100%;
   }
 }
-
+@media screen and (max-width: 540px) {
+  .big_wrapper, .quiz_container, .quiz_content_box {
+    height: auto !important;
+  }
+}
 .quiz_container._completed .right_part {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 260px;
