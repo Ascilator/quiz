@@ -157,6 +157,14 @@ a:active {
   transition: 1.5s;
 }
 
+@media screen and (max-width: 550px) {
+  .quiz_container._main_animation .right_part {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+}
+
 .quiz_container._completed {
   opacity: 1;
 }
@@ -182,15 +190,19 @@ a:active {
             flex: 0 0 100%;
   }
 }
-@media screen and (max-width: 540px) {
-  .big_wrapper, .quiz_container, .quiz_content_box {
-    height: auto !important;
-  }
-}
+
 .quiz_container._completed .right_part {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 260px;
           flex: 0 0 260px;
+}
+
+@media screen and (max-width: 550px) {
+  .quiz_container._completed .right_part {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
 }
 
 .quiz_container._finish {
@@ -291,7 +303,6 @@ a:active {
           flex: 1 1 auto;
   padding: 0 30px;
   position: relative;
-  overflow: hidden;
 }
 
 .quiz_content_box .left_part .questions_part .question_item {
@@ -320,6 +331,18 @@ a:active {
           transform: translate(0, 0);
   opacity: 1;
   visibility: visible;
+}
+
+@media screen and (max-width: 550px) {
+  .quiz_content_box .left_part .questions_part .question_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .quiz_content_box .left_part .questions_part .question_title {
@@ -451,6 +474,10 @@ a:active {
 @media screen and (max-width: 550px) {
   .quiz_content_box .left_part .questions_part .answear_cont {
     display: block;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 250px;
+            flex: 0 1 250px;
+    overflow: auto;
   }
 }
 
@@ -748,6 +775,10 @@ a:active {
   .quiz_content_box .left_part .footer_controls {
     padding: 8px 10px 8px 25px;
     background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }
 }
 
@@ -922,6 +953,14 @@ a:active {
   }
   .quiz_content_box .right_part._right_js {
     display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .quiz_content_box .right_part {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
   }
 }
 
