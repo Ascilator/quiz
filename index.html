@@ -12,8 +12,18 @@
 <body>
 
 	<div class="big_wrapper">
-
-		<div class="quiz_container _main_animation">
+		<div class="start_btn">
+			<div class="icon">
+				<svg viewBox="0 0 24 24" class="mdi-icon mdi-24px">
+					<title>mdi-checkbox-marked-circle-outline</title>
+					<path
+						d="M20,12C20,16.42 16.42,20 12,20C7.58,20 4,16.42 4,12C4,7.58 7.58,4 12,4C12.76,4 13.5,4.11 14.2,4.31L15.77,2.74C14.61,2.26 13.34,2 12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z"
+						stroke-width="0" fill-rule="nonzero"></path>
+				</svg>
+			</div>
+			<div class="text">Получить</div>
+		</div>
+		<div class="quiz_container _main_animation _finish">
 			<div class="quiz_content_box">
 				<div class="left_part">
 					<div class="quiz_header">
@@ -296,7 +306,7 @@
 								<input type="text" placeholder="Введите номер">
 							</div>
 						</div>
-						<button type="submit">
+						<button type="submit" class="end">
 							<div class="icon">
 								<svg viewBox="0 0 24 24" class="mdi-icon mdi-24px">
 									<title>mdi-checkbox-marked-circle-outline</title>
@@ -332,7 +342,13 @@
 				</form>
 			</div>
 		</div>
-
+		<div class="end_popup">
+			<div class="title">Спасибо! 👏</div>
+			<div class="suptitle">
+				<p>Менеджер свяжется с вами в течении дня.</p>
+				<p>И отправит свежий прайс и каталог!</p>
+			</div>
+		</div>
 	</div>
 
 	<script src="scripts/jquery-3.5.1.min.js"></script>

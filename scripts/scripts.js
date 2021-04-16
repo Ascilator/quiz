@@ -1,11 +1,23 @@
 ﻿
+document.querySelector('.start_btn').addEventListener('click', function () {
+    main_animation();
+})
+
+
 function main_animation() {
-    const main_box = document.querySelector('._main_animation');
-    main_box.classList.add('_completed');
+    document.querySelector('.start_btn').classList.add('_active')
+    setTimeout(function () {
+        const main_box = document.querySelector('._main_animation');
+        main_box.classList.remove('_finish');
+        main_box.classList.add('_completed');
+        start();
+    }, 500)
+
 }
 
 
-(function () {
+
+function start() {
     const QUESTIONS = [
         {
             question: "Как вы работаете?",
@@ -247,7 +259,15 @@ function main_animation() {
             }, 400)
         }, 1500)
     }
+    document.querySelector('.end').addEventListener('click', function (e) {
+        e.preventDefault();
+        const finish_box = document.querySelector('.quiz_container_part_2');
+        finish_box.classList.add('_finish')
+        setTimeout(function () {
+            document.querySelector('.end_popup').classList.add('_active');
+        }, 300)
 
+    })
     assistent();
     drop_down();
     function assistent() {
@@ -293,8 +313,7 @@ function main_animation() {
             //$(this).parent().siblings().children('.flag').text($(this).children('.flag'))
         });
     }
-})()
+}
 
 
 
-main_animation();
