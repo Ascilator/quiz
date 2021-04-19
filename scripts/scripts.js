@@ -22,7 +22,7 @@ function main_animation() {
         main_box.classList.remove('_finish');
         main_box.classList.add('_completed');
         start();
-    }, 500)
+    }, 1300)
 
 }
 
