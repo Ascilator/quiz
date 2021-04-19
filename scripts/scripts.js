@@ -2,11 +2,22 @@
 document.querySelector('.start_btn').addEventListener('click', function () {
     main_animation();
 })
-
-
+document.querySelector('.black_href').addEventListener('click', function () {
+    document.querySelector('.popup').classList.add('_none');
+    document.querySelector('.black_href').classList.add('_none');
+})
+document.querySelector('.cross').addEventListener('click', function () {
+    document.querySelector('.popup').classList.add('_none');
+    document.querySelector('.black_href').classList.add('_none');
+})
 function main_animation() {
-    document.querySelector('.start_btn').classList.add('_active')
+    document.querySelector('.start_btn').classList.add('_active');
+    document.querySelector('.popup').classList.add('_active');
+
+
     setTimeout(function () {
+        document.querySelector('.popup').classList.add('_finish');
+
         const main_box = document.querySelector('._main_animation');
         main_box.classList.remove('_finish');
         main_box.classList.add('_completed');
